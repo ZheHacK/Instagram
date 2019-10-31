@@ -15,7 +15,7 @@ const User = [
 {
 	type:'input',
 	name:'username',
-	message:'Insert Username:',
+	message:'Masukkan Nama Pengguna:',
 	validate: function(value){
 		if(!value) return 'Can\'t Empty';
 		return true;
@@ -24,7 +24,7 @@ const User = [
 {
 	type:'password',
 	name:'password',
-	message:'Insert Password:',
+	message:'Masukkan Kata Sandi:',
 	mask:'*',
 	validate: function(value){
 		if(!value) return 'Can\'t Empty';
