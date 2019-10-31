@@ -1,7 +1,7 @@
 'use strict'
 
-// Recode by @zhe_pengumbara
-// Last modified by ZheAlHaqy (@zhe_pengumbara) on September 14, 2019
+// Recode by ZheHacK
+// Last modified by ZheHacK (@zhe_pengumbara) on September 14, 2019
 // ig : @zhe_pengumbara
 
 const Client = require('instagram-private-api').V1;
@@ -44,7 +44,7 @@ const User = [
 {
   type:'input',
   name:'ittyw',
-  message:'Input Total of Target You Want (ITTYW):',
+  message:'Masukkan Total Target yang Anda Inginkan (ITTYW):',
   validate: function(value){
     value = value.match(/[0-9]/);
     if (value) return true;
@@ -54,7 +54,7 @@ const User = [
 {
   type:'input',
   name:'sleep',
-  message:'Insert Sleep ( In MiliSeconds):',
+  message:'Masukkan Istirahat ( In MiliSeconds):',
   validate: function(value){
     value = value.match(/[0-9]/);
     if (value) return true;
@@ -135,13 +135,13 @@ async function ngeLike(session, id){
 
 const Excute = async function(User, TargetUsername, ittyw, sleep){
   try {
-	console.log(chalk`{yellow \n? Try to Login . . .}`)
+	console.log(chalk`{yellow \n? Mencoba masuk. . .}`)
     const doLogin = await Login(User);
-	console.log(chalk`{green ✓ Login Success. }{yellow ? Try To Get All Media Target . . .}`)
+	console.log(chalk`{green ✓ Login Success. }{yellow ? Mencoba Untuk Mendapatkan Semua Target Media . . .}`)
     const getTarget = await Target(TargetUsername);
     var getMedia = await Media(doLogin.session, getTarget.id);
-    console.log(chalk`{bold.green ✓ Succsess To Get All Media/Posts Target » ${TargetUsername} }\n`);
-    console.log(chalk`{yellow ≡ READY TO START BOM LIKE TARGET WITH RATIO ${ittyw} TARGET/${sleep} MiliSeconds\n}`)
+    console.log(chalk`{bold.green ✓ Succsess Untuk Mendapatkan Semua Media / Nama Target » ${TargetUsername} }\n`);
+    console.log(chalk`{yellow ≡ SIAP MEMULAI BOM LIKE SASARAN DENGAN RASIO ${ittyw} TARGET/${sleep} MiliSeconds\n}`)
     getMedia = _.chunk(getMedia, ittyw);
     for (let i = 0; i < getMedia.length; i++) {
 	  var timeNow = new Date();
@@ -154,7 +154,7 @@ const Excute = async function(User, TargetUsername, ittyw, sleep){
 	  console.log(chalk`{yellow \nϟ Current Account: {bold.green ${User.username}} » Delay: ${ittyw}/${sleep}ms\n}`);
           await delay(sleep)
     }
-    console.log(chalk`{yellow ✓ All Posts Have Been Liked and Succeeded » Status: All Done » Time: ${timeNow} \n}`);
+    console.log(chalk`{yellow ✓ Semua Posting Telah Disukai dan Berhasil » Status: All Done » Time: ${timeNow} \n}`);
 	
   } catch (err) {
     console.log(err);
@@ -162,7 +162,7 @@ const Excute = async function(User, TargetUsername, ittyw, sleep){
 }
 console.log(chalk`{bold.cyan
   Ξ TITLE  : BOM LIKE POST TARGET [Set Sleep]
-Ξ CODE   : MUSLIM CYBER ARMY (Zhealhaqy)
+  Ξ CODE   : ZheHacK (@zhe_pengumbara)
   Ξ STATUS : {bold.green [+ITTWY]} & {bold.yellow [TESTED]}}
       `);
 inquirer.prompt(User)
