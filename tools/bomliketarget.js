@@ -35,7 +35,7 @@ const User = [
 {
   type:'input',
   name:'target',
-  message:'Insert Username Target (Without @[at]):',
+  message:'Masukkan Target Nama Pengguna (Tanpa @[at]):',
   validate: function(value){
     if(!value) return 'Can\'t Empty';
     return true;
@@ -54,7 +54,7 @@ const User = [
 {
   type:'input',
   name:'sleep',
-  message:'Masukkan Istirahat ( In MiliSeconds):',
+  message:'Masukkan Istirahat (Dalam milidetik):',
   validate: function(value){
     value = value.match(/[0-9]/);
     if (value) return true;
