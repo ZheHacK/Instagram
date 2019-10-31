@@ -1,7 +1,7 @@
 'use strict'
 
-// Recode by @zhe_pengumbara
-// Last modified by ZheAlHaqy (@zhe_pengumbara) on September 14, 2019
+// Recode by ZheHacK
+// Last modified by ZheHacK (@zhe_pengumbara) on September 14, 2019
 // ig : @zhe_pengumbara
 
 const Client = require('instagram-private-api').V1;
@@ -34,7 +34,7 @@ const User = [
 {
 	type:'input',
 	name:'ittyw',
-	message:'Input Total of Target You Want (ITTYW):',
+	message:'Masukkan Total Target yang Anda Inginkan (ITTYW):',
 	validate: function(value){
 		value = value.match(/[0-9]/);
 		if (value) return true;
@@ -44,7 +44,7 @@ const User = [
 {
 	type:'input',
 	name:'sleep',
-	message:'Insert Sleep (In MiliSeconds):',
+	message:'Masukkan Istirahat (Dalam milidetik):',
 	validate: function(value){
 		value = value.match(/[0-9]/);
 		if (value) return true;
@@ -118,9 +118,9 @@ const Unfollow = async function(session, accountId){
 
 const Excute = async function(User,sleep,ittyw){
 	try {
-		console.log(chalk`\n{yellow ? Try to Login . . .}`);
+		console.log(chalk`\n{yellow ? Mencoba Masuk . . .}`);
 		const doLogin = await Login(User);
-		console.log(chalk`{green ✓ Login Succsess. }{yellow ? Try to get list followers, following and unfollow . . .}`);
+		console.log(chalk`{green ✓ Login Succsess. }{yellow ? Cobalah untuk mendapatkan daftar followers, following and unfollow . . .}`);
 		const task = [
 		Followers(doLogin.session, doLogin.account.id),
 		Following(doLogin.session, doLogin.account.id)
@@ -134,7 +134,7 @@ const Excute = async function(User,sleep,ittyw){
 			}
 		}));
 		console.log(chalk`{green ! Success in Finding Value {bold.red Unfollow: ${AccountToUnfollow.length}}\n}`);
-		console.log(chalk`{yellow ≡ READY TO START UFNFB WITH RATIO ${ittyw} TARGET/${sleep} MiliSeconds\n}`);
+		console.log(chalk`{yellow ≡ SIAP MEMULAI UFNFB DENGAN RASIO ${ittyw} TARGET/${sleep} MiliSeconds\n}`);
 		AccountToUnfollow = _.chunk(AccountToUnfollow, ittyw);
 		for (let i = 0; i < AccountToUnfollow.length; i++) {
 			var timeNow = new Date();
@@ -152,7 +152,7 @@ const Excute = async function(User,sleep,ittyw){
 }
 console.log(chalk`{bold.cyan
   Ξ TITLE  : UNFB [UNFOLLOW NOT FOLLOWBACK INSTAGRAM]
-  Ξ CODE   : MUSLIM CYBER ARMY (Zhealhaqy)
+  Ξ CODE   : ZheHacK (Zhealhaqy)
   Ξ STATUS : {bold.green [+ITTWY]} & {bold.yellow [TESTED]}}
       `);
 inquirer.prompt(User)
