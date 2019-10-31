@@ -43,7 +43,7 @@ const questionTools = [
 }
 ]
 const main = async () => {
-  //Last modified by ZheAlhaqy (@zhe_pengumbara) on September 14, 2019
+  //Last modified by ZheHacK (@zhe_pengumbara) on September 14, 2019
   try{
     var toolChoise = await inquirer.prompt(questionTools);
     toolChoise = toolChoise.Tools;
@@ -80,13 +80,13 @@ const main = async () => {
   } catch(e) {
     }
   }
-  //Last modified by Zhe AlHaqy (@zhe_pengumbara) on September 14, 2019
+  //Last modified by ZheHacK(@zhe_pengumbara) on September 14, 2019
 
   console.log(chalk`{bold.green
   Ξ TITLE  : INSTAGRAM PRIVATE TOOLS
   Ξ UPLOAD : 29/08/2019 [16.28 WIB]
-  Ξ CODEBY : Zhe AlHaqy [Ccocot Ccocot]
-  Ξ UPDATE : zhe_pengumbara [@zhe_pengumbara]
+  Ξ CODEBY : ZheHacK [Zhe1007]
+  Ξ Instagram : @zhe_pengumbara
   }`);
   console.log(chalk`{bold.red   •••••••••••••••••••••••••••••••••••••••••}`);
   console.log("  Ξ START  : ".bold.red + moment().format('D MMMM YYYY, h:mm:ss a'));
@@ -95,7 +95,7 @@ const main = async () => {
   console.log(chalk`{bold.red   •••••••••••••••••••••••••••••••••••••••••}`);
   console.log(chalk`{bold.yellow
   Ξ THANKS : Instagram Private Tools [Original Source File]
-           : Zhe AlHaqy | zhe_pengumbara
-           : Muslim Cyber Army}`);
+           : Muslim Cyber Army
+
   console.log('\n')
   main();
