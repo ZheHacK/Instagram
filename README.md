@@ -28,9 +28,9 @@
 	$ node index.js
 
 ## My Social Media
-	☑ Instagram	: <p> https://www.instagram.com/zhe_pengumbara</p>
+	☑ Instagram	: https://www.instagram.com/zhe_pengumbara
 	☑ Youtube	: https://www.youtube.com/channel/UCrK_ngunrK33sd7svsuYsuQ
 	☑ Github	: https://github.com/ZheHacK
 	
 ## License
-	☑ This project is licensed under MIT License 2017-2019. https://opensource.org/licenses/MIT.
+	☑ This project is licensed under MIT License 2018-2019. https://opensource.org/licenses/MIT.
