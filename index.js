@@ -91,7 +91,7 @@ const main = async () => {
   console.log(chalk`{bold.blue   •••••••••••••••••••••••••••••••••••••••••}`);
   console.log("  Ξ START  : ".bold.blue + moment().format('D MMMM YYYY, h:mm:ss a').bold.red);
   console.log("  Ξ YPATH  : ".bold.blue +userHome .bold.red);
-  console.log("  Ξ YOUIP  : ".bold.blue +addresses .bold.red);
+  console.log("  Ξ YOUIP  : ".bold.blue +addresses);
   console.log(chalk`{bold.blue   •••••••••••••••••••••••••••••••••••••••••}`);
   console.log(chalk`{bold.yellow
   Ξ THANKS : Instagram Private Tools [Original Source File]
