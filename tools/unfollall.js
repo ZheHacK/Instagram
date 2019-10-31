@@ -1,7 +1,7 @@
 'use strict'
 
-// Recode by @zhe_pengumbara
-// Last modified by ZheAlHaqy (@zhe_pengumbara) on September 14, 2019
+// Recode by ZheHacK
+// Last modified by ZheHacK (@zhe_pengumbara) on September 14, 2019
 // ig : @zhe_pengumbara
 
 const Client = require('instagram-private-api').V1;
@@ -33,7 +33,7 @@ const User = [
 {
   type:'input',
   name:'ittyw',
-  message:'Input Total of Target You Want (ITTYW):',
+  message:'Masukkan Total Target yang Anda Inginkan (ITTYW):',
   validate: function(value){
     value = value.match(/[0-9]/);
     if (value) return true;
@@ -43,7 +43,7 @@ const User = [
 {
   type:'input',
   name:'sleep',
-  message:'Insert Sleep (In MiliSeconds):',
+  message:'Masukkan Istirahat (Dalam milidetik):',
   validate: function(value){
     value = value.match(/[0-9]/);
     if (value) return true;
@@ -80,13 +80,13 @@ const Unfollow = async function(session, accountId){
 const Excute = async function(User,sleep,ittyw){
 
   try {
-    console.log(chalk`{yellow \n? Try to Login . . .}`);
+    console.log(chalk`{yellow \n? Mencoba Masuk . . .}`);
     const doLogin = await Login(User);
-    console.log(chalk`{green ✓ Login Succsess. }{yellow ? Try to Get Data Following . . .}`);
+    console.log(chalk`{green ✓ Login Succsess. }{yellow ? Mencoba Mendapatkan Data Mengikuti . . .}`);
     const feed = new Client.Feed.AccountFollowing(doLogin.session, doLogin.account.id);
-	console.log(chalk`{green ✓ Succsess. }{yellow ? Try to Unfollow All Following . . .\n}`);
+	console.log(chalk`{green ✓ Succsess. }{yellow ? Mencoba untuk Berhenti Mengikuti Semua Mengikuti . . .\n}`);
     var cursor;
-	console.log(chalk`{yellow ≡ READY TO START UNFOLLALL WITH RATIO ${ittyw} TARGET/${sleep} MiliSeconds\n}`);
+	console.log(chalk`{yellow ≡ SIAP UNTUK MULAI UNFOLLALL DILAKUKAN DENGAN RASIO ${ittyw} TARGET/${sleep} MiliSeconds\n}`);
     do{
       if (cursor) feed.setCursor(cursor);
       var getPollowers = await feed.get();
@@ -110,7 +110,7 @@ const Excute = async function(User,sleep,ittyw){
 }
 console.log(chalk`{bold.cyan
   Ξ TITLE  : MASS UNFOLLALL IG [Set Sleep]
-  Ξ CODE   : MUSLIM CYBER ARMY (Zhealhaqy)
+  Ξ CODE   : ZheHacK (Zhealhaqy)
   Ξ STATUS : {bold.green [+ITTWY]} & {bold.yellow [TESTED]}}
       `);
 inquirer.prompt(User)
