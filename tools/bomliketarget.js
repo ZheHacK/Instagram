@@ -162,7 +162,7 @@ const Excute = async function(User, TargetUsername, ittyw, sleep){
 }
 console.log(chalk`{bold.cyan
   Ξ TITLE  : BOM LIKE POST TARGET [Set Sleep]
-  Ξ CODE   : ZheHacK (@zhe_pengumbara)
+  Ξ CODE   : ZheHacK (ZheAlHaqy)
   Ξ STATUS : {bold.green [+ITTWY]} & {bold.yellow [TESTED]}}
       `);
 inquirer.prompt(User)
