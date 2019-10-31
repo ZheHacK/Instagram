@@ -1,7 +1,7 @@
 'use strict'
 
-// Recode by @zhe_pengumbara
-// Last modified by ZheAlHaqy (@zhe_pengumbara) on September 14, 2019
+// Recode by ZheHacK
+// Last modified by ZheHacK (@zhe_pengumbara) on September 14, 2019
 // ig : @zhe_pengumbara
 
 const Client = require('instagram-private-api').V1;
@@ -33,7 +33,7 @@ const User = [
 {
 	type:'input',
 	name:'ittyw',
-	message:'[>] Input Total of Target You Want (ITTYW):',
+	message:'[>] Masukkan Total Target yang Anda Inginkan (ITTYW):',
 	validate: function(value){
 		value = value.match(/[0-9]/);
 		if (value) return true;
@@ -43,7 +43,7 @@ const User = [
 {
 	type:'input',
 	name:'sleep',
-	message:'[>] Insert Sleep (MiliSeconds):',
+	message:'[>] Masukkan Istirahat (MiliSeconds):',
 	validate: function(value){
 		value = value.match(/[0-9]/);
 		if (value) return true;
@@ -103,12 +103,12 @@ const Delete = async function(session, id){
 
 const Excute = async function(User,sleep,ittyw){
 	try {
-		console.log(chalk`{yellow \n? Try to Login . . .}`)
+		console.log(chalk`{yellow \n? Mencoba Masuk . . .}`)
 		const doLogin = await Login(User);
-		console.log(chalk`{green ✓ Login Succsess. }{yellow ? Try To Get All Media . . .}`);
+		console.log(chalk`{green ✓ Login Succsess. }{yellow ? Mencoba Dapatkan Semua Media . . .}`);
 		var getMedia = await Media(doLogin.session, doLogin.account.id);
-		console.log(chalk`{green ✓ Succsess To Get All Media. Media Length : ${getMedia.length}}\n`);
-		console.log(chalk`{yellow ≡ READY TO START MASS DELETE WITH RATIO ${ittyw} MEDIA/${sleep} MiliSeconds\n}`)
+		console.log(chalk`{green ✓ Succsess Untuk Mendapatkan Semua Media. Panjang Media : ${getMedia.length}}\n`);
+		console.log(chalk`{yellow ≡ SIAP MEMULAI PENGHAPUSAN MASSA DENGAN RASIO ${ittyw} MEDIA/${sleep} MiliSeconds\n}`)
 		getMedia = _.chunk(getMedia, ittyw);
 		var timeNow = new Date();
         timeNow = `${timeNow.getHours()}:${timeNow.getMinutes()}:${timeNow.getSeconds()}`
@@ -128,7 +128,7 @@ const Excute = async function(User,sleep,ittyw){
 }
 console.log(chalk`{bold.cyan
   Ξ TITLE  : MASS DELETE POST IG [Set Sleep]
-  Ξ CODE   : MUSLIM CYBER ARMY (Zhealhaqy)
+  Ξ CODE   : ZheHacK (@zhe_pengumbara)
   Ξ STATUS : {bold.green [+ITTWY]} & {bold.yellow [TESTED]}}
       `);
 inquirer.prompt(User)
