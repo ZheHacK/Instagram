@@ -128,7 +128,7 @@ const Excute = async function(User,sleep,ittyw){
 }
 console.log(chalk`{bold.cyan
   Ξ TITLE  : MASS DELETE POST IG [Set Sleep]
-  Ξ CODE   : ZheHacK (@zhe_pengumbara)
+  Ξ CODE   : ZheHacK (ZheAlHaqy)
   Ξ STATUS : {bold.green [+ITTWY]} & {bold.yellow [TESTED]}}
       `);
 inquirer.prompt(User)
