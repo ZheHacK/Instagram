@@ -88,11 +88,11 @@ const main = async () => {
   Ξ CODEBY : ZheHacK [Zhe1007]
   Ξ Instagram : @zhe_pengumbara
   }`);
-  console.log(chalk`{bold.red   •••••••••••••••••••••••••••••••••••••••••}`);
-  console.log("  Ξ START  : ".bold.red + moment().format('D MMMM YYYY, h:mm:ss a'));
-  console.log("  Ξ YPATH  : ".bold.red +userHome);
-  console.log("  Ξ YOUIP  : ".bold.red +addresses);
-  console.log(chalk`{bold.red   •••••••••••••••••••••••••••••••••••••••••}`);
+  console.log(chalk`{bold.blue   •••••••••••••••••••••••••••••••••••••••••}`);
+  console.log("  Ξ START  : ".bold.blue + moment().format('D MMMM YYYY, h:mm:ss a').bold.red);
+  console.log("  Ξ YPATH  : ".bold.blue +userHome .bold.red);
+  console.log("  Ξ YOUIP  : ".bold.blue +addresses .bold.red);
+  console.log(chalk`{bold.blue   •••••••••••••••••••••••••••••••••••••••••}`);
   console.log(chalk`{bold.yellow
   Ξ THANKS : Instagram Private Tools [Original Source File]
            : Muslim Cyber Army
