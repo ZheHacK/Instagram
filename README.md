@@ -1,5 +1,5 @@
 ## INSTAGRAM TOOLS [TOOLSIG]
-* Instagram Tools Based on NodeJS (This script or code was created by ccocot - ZheAlhaqy).
+* Instagram Tools Based on NodeJS (This script or code was created by ZheAlhaqy).
 * Tools (BomLikeTarget,Botlike1,Botlike2,Dellallphoto,Fah,Fftauto,Flaauto,Flmauto,Unfollall,Unfollnotfollback).
 
 ## Tutorial on Termux [ANDROID]
