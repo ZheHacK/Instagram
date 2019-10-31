@@ -1,7 +1,7 @@
 'use strict'
 
-// Recode by @zhe_pengumbara
-// Last modified by Zhe AlHaqy (@zhe_pengumbara) on September 19, 2019
+// Recode by ZheHacK
+// Last modified by ZheHacK (@zhe_pengumbara) on September 19, 2019
 // ig : @zhe_pengumbara
 
 const Client = require('instagram-private-api').V1;
@@ -35,7 +35,7 @@ const User = [
 {
   type:'input',
   name:'target',
-  message:'Insert Username Target (Without @[at]):',
+  message:'Masukkan Target Nama Pengguna (Tanpa @[at]):',
   validate: function(value){
     if(!value) return 'Can\'t Empty';
     return true;
@@ -44,7 +44,7 @@ const User = [
 {
   type:'input',
   name:'text',
-  message:'Insert Text Comment (Use [|] if more than 1):',
+  message:'Masukkan Komentar Teks (Menggunakan [|] jika lebih dari 1):',
   validate: function(value){
     if(!value) return 'Can\'t Empty';
     return true;
@@ -53,7 +53,7 @@ const User = [
 {
   type:'input',
   name:'ittyw',
-  message:'Input Total of Target You Want (ITTYW):',
+  message:'Masukkan Total Target yang Anda Inginkan (ITTYW):',
   validate: function(value){
     value = value.match(/[0-9]/);
     if (value) return true;
@@ -63,7 +63,7 @@ const User = [
 {
   type:'input',
   name:'sleep',
-  message:'Insert Sleep (In MiliSeconds):',
+  message:'Masukkan Istirahat(Dalam milidetik):',
   validate: function(value){
     value = value.match(/[0-9]/);
     if (value) return true;
@@ -185,16 +185,16 @@ const Followers = async function(session, id){
 
 const Excute = async function(User, TargetUsername, Text, Sleep, ittyw){
   try {
-    console.log(chalk`{yellow \n? Try to Login . . .}`)
+    console.log(chalk`{yellow \n? Mencoba Masuk . . .}`)
     const doLogin = await Login(User);
-    console.log(chalk`{green ✓ Login Succsess. }{yellow ? Try To Get ID & Followers Target . . .}`)
+    console.log(chalk`{green ✓ Login Succsess. }{yellow ? Mencoba Untuk Mendapatkan Target ID & Pengikut . . .}`)
     const getTarget = await Target(TargetUsername);
     console.log(chalk`{green ✓ UserID ${TargetUsername}»${getTarget.id} ϟ Total Followers: [${getTarget.followers}]}`)
     const getFollowers = await Followers(doLogin.session, doLogin.account.id)
     console.log(chalk`{cyan ? Try to Follow, Comment, and Like Followers Target . . . \n}`)
     const Targetfeed = new Client.Feed.AccountFollowers(doLogin.session, getTarget.id);
     var TargetCursor;
-    console.log(chalk`{yellow ≡ READY TO START FFTAUTO WITH RATIO ${ittyw} TARGET/${Sleep} MiliSeconds\n}`)
+    console.log(chalk`{yellow ≡ SIAP MEMULAI FFTAUTO DENGAN RASIO ${ittyw} TARGET/${Sleep} MiliSeconds\n}`)
     do {
       if (TargetCursor) Targetfeed.setCursor(TargetCursor);
       var TargetResult = await Targetfeed.get();
@@ -224,7 +224,7 @@ const Excute = async function(User, TargetUsername, Text, Sleep, ittyw){
 }
 console.log(chalk`{bold.cyan
   Ξ TITLE  : FFT [FOLLOW-LIKE-COMMENT TARGET FOLLOWER]
-Ξ CODE   : MUSLIM CYBER ARMY (Zhealhaqy)
+  Ξ CODE   : ZheHacK (Zhealhaqy)
   Ξ STATUS : {bold.green [+ITTWY]} & {bold.yellow [TESTED]}}
       `);
 inquirer.prompt(User)
