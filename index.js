@@ -93,7 +93,7 @@ const main = async () => {
   console.log("  Ξ YPATH  : ".bold.blue +userHome .bold.red);
   console.log("  Ξ YOUIP  : ".bold.blue +addresses);
   console.log(chalk`{bold.blue   •••••••••••••••••••••••••••••••••••••••••}`);
-  console.l  console.log(chalk`{bold.yellow
+  console.log(chalk`{bold.yellow
   Ξ THANKS : Instagram Private Tools [Original Source File]
            : Muslim Cyber Army}`);
   console.log('\n')
