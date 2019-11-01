@@ -93,9 +93,9 @@ const main = async () => {
   console.log("  Ξ YPATH  : ".bold.blue +userHome .bold.red);
   console.log("  Ξ YOUIP  : ".bold.blue +addresses);
   console.log(chalk`{bold.blue   •••••••••••••••••••••••••••••••••••••••••}`);
-  console.log(chalk`{bold.yellow
+  console.l  console.log(chalk`{bold.yellow
   Ξ THANKS : Instagram Private Tools [Original Source File]
-           : Muslim Cyber Army
-
+           : Muslim Cyber Army}`);
   console.log('\n')
   main();
+  
