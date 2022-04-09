@@ -8,7 +8,7 @@
     "delay": "^2.0.0",
     "inquirer": "^4.0.1",
     "instagram-private-api": "git+https://github.com/huttarichard/instagram-private-api.git",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
     "string": "^3.3.3"
